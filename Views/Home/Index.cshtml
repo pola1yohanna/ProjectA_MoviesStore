@@ -1,8 +1,14 @@
-﻿@{
+﻿@model List<Movie>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="grid-container">
+        <a class="btn btn-info grid-item" asp-action="ViewMovies" asp-route-movies="@Model">View Movies</a>
+        <a class="btn btn-info grid-item">Add Movie</a>
+        <a class="btn btn-info grid-item">Edit Movie</a>
+        <a class="btn btn-info grid-item">Delete Movie</a>
+    </div>
 </div>
