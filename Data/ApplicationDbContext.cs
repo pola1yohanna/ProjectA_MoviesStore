@@ -14,5 +14,6 @@ namespace ProjectA_Movies.Data
         {
 
         }
+        public DbSet<Movie> Movies { get; set; }
     }
 }

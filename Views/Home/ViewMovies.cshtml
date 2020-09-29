@@ -1,4 +1,4 @@
-﻿@model List<Movie>
+﻿@model IList<Movie>
 @{
     ViewData["Title"] = "ViewMovies";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,30 +6,30 @@
     <div class="text-center">
         <h1>ViewMovies</h1>
         <div class="grid-container">
-            <a class="btn btn-info grid-item" disabled>View Movies</a>
-            <a class="btn btn-info grid-item">Add Movie</a>
-            <a class="btn btn-info grid-item">Edit Movie</a>
-            <a class="btn btn-info grid-item">Delete Movie</a>
+            <a class="btn btn-primary grid-item" disabled>View Movies</a>
+            <a class="btn btn-outline-primary grid-item" asp-action="Add">Add Movie</a>
+            <a class="btn btn-primary grid-item">Edit Movie</a>
+            <a class="btn btn-outline-primary grid-item">Delete Movie</a>
         </div>
     </div>
     <div>
         @if (Model.Count() > 0)
         {
 
-            <div class="text-lg-center text-capitalize">
-                <table class="table-striped">
+            <div style="margin:2vh 0">
+                <table class="table-dark table table-striped m-auto">
                     <thead>
                         <tr>
-                            <th class="active">Name</th>
-                            <th class="alert-dark">Genre</th>
+                            <th >Name</th>
+                            <th >Genre</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td class="accordion">@item.Name</td>
-                                <td class="alert-dismissible">@item.Genre</td>
+                                <td >@item.Name</td>
+                                <td >@item.Genre</td>
                             </tr>
                         }
                     </tbody>

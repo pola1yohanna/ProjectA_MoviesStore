@@ -39,6 +39,12 @@ a {
 
 /* Sticky footer styles
 -------------------------------------------------- */
+th,td
+{
+    text-align:center;
+    margin:15px;
+
+}
 html {
   font-size: 14px;
 }
