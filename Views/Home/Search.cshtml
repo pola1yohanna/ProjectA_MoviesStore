@@ -1,6 +1,5 @@
 ﻿
     <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
@@ -9,12 +8,22 @@
             </div>
             <div class="modal-body">
                 
-                <form asp-action="Delete" method="post">
+               
+                <form asp-action="Search" method="post">
                     <div class="form-group row">
                         <label for="searchtext" class="col-sm-3 m-0">Movie Name</label>
                         <input type="text" class="form-control col-sm-5" id="searchtext" name="name" placeholder="movie" />
                     </div>
-                    <button type="submit" class="btn btn-success" >Search</button>
+                    <div class="form-group row">
+                        <label for="page" class="col-sm-3 m-0">Page</label>
+                        <select id="page" name="actionpage" class="form-control col-sm-5">
+                            <option value="">Select Edit or Delete</option>
+                            <option value="Edit">Edit</option>
+                            <option value="Delete">Delete</option>
+                        </select>
+                    </div>
+             
+                    <button type="submit" class="btn btn-success">Search</button>
                 </form>
 
             </div>

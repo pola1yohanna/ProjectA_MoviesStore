@@ -1,0 +1,34 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Edit</h1>
+        <div class="grid-container">
+            <a class="btn btn-info grid-item" asp-action="ViewMovies">View Movies</a>
+            <a class="btn btn-info grid-item" asp-action="Add">Add Movie</a>
+            <button class="btn btn-info grid-item btn-info" type="button" data-toggle="modal" data-target="#myModal" >Change Movie</button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <partial name="Search" />
+            </div>
+        </div>
+    </div>
+<div>
+    <form method="post" asp-action="Edit">
+        <input type="hidden" asp-for="@Model.Id" />
+        <div class="form-group">
+            <label asp-for="@Model.Name">Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Name" />
+            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Genre" >Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Genre" />
+            <span asp-validation-for="@Model.Genre" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Edit</button>
+    </form>
+</div>
+

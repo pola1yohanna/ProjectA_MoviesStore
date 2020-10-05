@@ -4,12 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
     <div class="text-center">
-        <h1>ViewMovies</h1>
+        <h1 class="display-4">Delete</h1>
         <div class="grid-container">
-            <a class="btn btn-primary grid-item" disabled>View Movies</a>
-            <a class="btn btn-outline-primary grid-item" asp-action="Add">Add Movie</a>
-            <a class="btn btn-primary grid-item">Edit Movie</a>
-            <a class="btn btn-outline-primary grid-item">Delete Movie</a>
+            <a class="btn disabled grid-item" asp-action="ViewMovies" >View Movies</a>
+            <a class="btn btn-info grid-item" asp-action="Add">Add Movie</a>
+            <button class="btn btn-info grid-item btn-info" type="button" data-toggle="modal" data-target="#myModal">Change Movie</button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <partial name="Search" />
+            </div>
         </div>
     </div>
     <div>
